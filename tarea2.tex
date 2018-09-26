@@ -4,6 +4,9 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{cancel}
+\newcommand{\s}{\underline{Soluci\'{o}n:}}
 \graphicspath{ {images/} }
 
 \begin{document}{}
@@ -27,7 +30,22 @@ quadrant enclosed between the circle $x^2 + y^2 = 25$ and the line $x + y = 5$. 
 \textbf{22.} $ {\displaystyle \iint \limits_R } \, x \, \, \text dA; \, R$ is the region
 enclosed by $y = sin^{-1} x, x = \frac{1}{\sqrt{2}},$ and $y = 0$. \\
 
+\s
+
+Entonces $0 \leq y \leq \frac{\pi}{4}$ y $x$ va desde
+$x = \sin y$ a $ x = \frac{1}{\sqrt{2}}$  por lo que se tiene
+\[{\displaystyle \iint \limits_R } \, x \, \, \text dA; \, R = \int^{\frac{\pi}{4}}_{0}\int^{\frac{1}{\sqrt{2}}}_{sin y} x dx dy\]
+\[\hspace{2cm}= \int^{\frac{\pi}{4}}_{0} \frac{x^2}{2} \Big|^{\frac{1}{\sqrt{2}}}_{sin y} dy \]
+\[\hspace{2.9cm}= \int^{\frac{\pi}{4}}_{0} \left(\frac{\left(\frac{1}{\sqrt{2}}\right)^2}{2} - \frac{\left(sin y\right)^2}{2} \right) dy \]
+\[\hspace{3.2cm}= \int^{\frac{\pi}{4}}_{0} \frac{1}{4} - \frac{sin^2y}{2} dy\]
+\[\hspace{2.7cm}= \frac{1}{4}\int^{\frac{\pi}{4}}_{0} 1 - 2 sin^2y dy\]
+\[\hspace{0.7 cm}= \frac{1}{4}\int^{\frac{\pi}{4}}_{0} \cos 2y dy \]
+\[\hspace{1cm}= \frac{1}{4}\left(\frac{1}{2}\sin2y\Big|^{\frac{\pi}{4}}_{0}\right)\]
+\[\hspace{1cm}= \frac{1}{8}\left(\sin2\left(\frac{\pi}{4}\right) - \sin2(0)\right)\]
+\[\hspace{1cm}= \frac{1}{8}\left(1 - 0\right)\]
+\[\hspace{1cm}= \frac{1}{8}\]
 \textbf{28.} \\
+
 
 (a) By hand or with the help of a graphing utility, make a sketch of the region
 $R$ enclosed between the curves $y = 4x^3 - x^4$ and $y = 3 - 4x + 4x^2$. \\
@@ -49,8 +67,9 @@ $R$ enclosed between the curves $y = 4x^3 - x^4$ and $y = 3 - 4x + 4x^2$. \\
 integration, and then by reversing the order of integration.\\
 
 (a) $ {\displaystyle \int \limits_0^4 \int \limits_{\sqrt{x}}^2 } \, \sin{\pi y^3} \, \, \text dx \text dy $ \\
-
+\s
 (b) $ {\displaystyle \int \limits_0^1 \int \limits_{sin^{-1}y}^{\frac{\pi}{2}} } \, \sec{\cos{x}}^2 \, \, \text dx \text dy $ \\
+\s
 
 \textbf{59.} Evaluate $ {\displaystyle \iint \limits_R } \, xy^2 \, \, \text dA $ over
 the region R shown in the accompanying figure. \\
@@ -58,6 +77,7 @@ the region R shown in the accompanying figure. \\
 \includegraphics[scale=0.5]{img2.png}
 \centering
 \end{figure}
+\s
 
 \textbf{63.} Suppose that the temperature in degrees Celsius at a point $(x, y)$
 on a flat metal plate is $T(x, y) = 5xy + x^2 $, where $x$ and $y$ are in meters.
@@ -77,8 +97,10 @@ coordinate planes and the plane \\
 \[ \frac{x}{a} + \frac{y}{b} + \frac{z}{c} = 1, (a > 0, b > 0, c > 0) \]
 
 (a) List six different iterated integrals that represent the volume of $G$. \\
+\s
 
 (b) Evaluate any one of the six to show that the volume of $G$ is $\frac{1}{6} abc$. \\
+\s
 
 \textbf{38.} Use a triple integral to derive the formula for the volume of the ellipsoid
 
@@ -95,7 +117,7 @@ coordinate planes and the plane \\
 \textbf{37.} \\
 
 \[ \int \limits_0^1 \, \int \limits_{e^y}^e \frac{x}{\ln{x}} \, \text dx \, \text dy \]
-
+\s
 \textbf{60.} Show that for a right triangle the average distance from any point
 in the triangle to one of the legs is one-third the length of the other leg.
 (The legs of a right triangle are the two sides that are not the hypotenuse.) \\
@@ -140,14 +162,24 @@ $\delta = e^{-3x}$ kg per $m^3$. \\
 \textbf{a)} Express the total mass of sludge in the trough in terms of triple
 integrals. \\
 
+\s
+
+Como la depresi\'{o}n es sim\'{e}trica con el plano xz, podemos encontrar la masa
+de un lado y duplicarla, por lo que la masa total esta dada por
+
+\[\text{Total mass of sludge} = 2 \int^{1}_{2} dz dy dx \]
+
+
 \textbf{b)} Express the total mass of sludge in the trough in terms of triple
 integrals. \\
 
 \textbf{55.} $E$ is the region bounded by $x = 0, y = 0, z = 0, z = 2,$
 and $2x + 4y + z = 4$. \\
+\s
 
 \textbf{57.} Figure 16.28 shows part of a spherical ball of radius 5 cm.
 Write an iterated triple integral which represents the volume of this region. \\
+\s
 
 \textbf{66.} Find the center of mass of the tetrahedron that is bounded by the
 $xy, yz, xz$ planes and the plane $x + 2y + 3z = 1$. Assume the density is
@@ -162,10 +194,31 @@ of volume $V$ , the moments of inertia about the coordinate axes are
 
 \[I_y = \frac{m}{V} \int _W (x^2 + z^2) \, \text d V \]
 
-\[I_z = \frac{m}{V} \int _W (x^2 + z^2) \, \text d V \]
+\[I_z = \frac{m}{V} \int _W (x^2 + y^2) \, \text d V \]
 
 \textbf{67.} Find the moment of inertia about the $z$-axis of the rectangular
 solid of mass $m$ given by $0 \leq x \leq 1, 0 \leq y \leq 2, 0 \leq z \leq 3$. \\
+
+\s
+
+Tenemos que calcular
+\[I_z = \frac{m}{V} \int _W (x^2 + y^2) \, \text d V \qquad (1) \]
+para ello primero encontraremos el valor de V
+\[V = 1 \cdot 2 \cdot 3 = 6 \]
+Sustituyendo el valor de V en (1) se tiene
+\[I_z = \frac{m}{6} \int _W (x^2 + y^2) \, \text d V\]
+Sabemos por La integral triple como una integral iterada que
+\[\int _W f \, \text d V = \int^{q}_{p}\left(\int^{d}_{c}\left(\int^{b}_{a}f(x,y,z) dx \right)dy \right)dz\]
+Entonces se tiene que
+\[\frac{m}{6} \int _W (x^2 + y^2) \, \text d V = \frac{m}{6}\int^{3}_{0}\left(\int^{2}_{0}\left(\int^{1}_{0}x^2 + y^2 dx \right)dy \right)dz \]
+\[\hspace{2.8cm} = \frac{m}{6}\int^{3}_{0}\left(\int^{2}_{0}\left(\frac{x^3}{3} + xy^2\Big|^{1}_{0}\right)dy \right)dz \]
+\[\hspace{3.4cm}  = \frac{m}{6}\int^{3}_{0}\left(\int^{2}_{0}\left(\frac{(1)^3}{3} + (1)y^2\Big|^{1}_{0}\right)dy \right)dz\]
+\[\hspace{1.45cm}= \frac{m}{6}\int^{3}_{0}\left(\int^{2}_{0}\frac{1}{3} + y^2 dy \right)dz\]
+\[\hspace{0.75cm}= \frac{m}{6}\int^{3}_{0}\left(\frac{y}{3} + \frac{y^3}{3}\right)\Big|^{2}_{0}dz \]
+\[\hspace{0.5cm}= \frac{m}{6}\int^{3}_{0}\left(\frac{2}{3} + \frac{2^3}{3}\right)dz \]
+\[\hspace{-0.4cm}= \frac{m}{6}\left(\frac{10}{3}z \right)\Big|^{3}_{0}\]
+\[\hspace{-0.6cm}= \frac{m}{6}\left(\frac{10}{\cancel{3}}\cancel{3}\right)\]
+\[\hspace{-0.8cm}= \frac{5m}{3}\]
 
 Are the statements in Problems 74–83 true or false? Give reasons for your answer. \\
 
@@ -175,6 +228,10 @@ and below a plane. \\
 
 \textbf{78.} The iterated integrals $\int_{-1}^1 \int_0^1 \int_0^{1-x^2} f dz dy dx $
 and $\int_0^1 \int_0^1 \int_{-\sqrt{1-z}}^{\sqrt{1-z}} f dz dy dx $ are equal. \\
+
+\s
+
+Es verdadero, porque
 
 
 \textbf{80.} If $W$ is the unit cube $0 \leq x \leq 1, 0 \leq y \leq 1, 0 \leq z \leq 1$
