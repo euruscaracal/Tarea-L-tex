@@ -228,14 +228,24 @@ Calculemos el volumen de G con la siguiente integral
    \text dy \]
 
 \s
-Cambiaremos el orden de integraci\'{o}n para que sea m\'{a}s f\'{a}cil integrar
+
+Los l\'{i}mites de integraci\'{o}n son $0 \leq y \leq 1$ y $e^y \leq x \leq e$,
+por lo que se tiene que $x = e^y -> (1)$, entonces para conseguir el l\'{i}mite de
+integraci\'{o}n repecto a $y$ debemos despejarlo de (1)
+\[x = e^y\]
+\[\ln x = \ln e^y\]
+\[\hspace{-0.6cm}\ln x = y\]
+Entonces el l\'{i}mite de integraci\'{o}n respecto a $y$ es $0 \leq y \leq \ln x$
+y el l\'{i}mite de integraci\'{o}n respecto a $x$ es $0 \leq x \leq e$
+
 \[\int \limits_0^1 \, \int \limits_{e^y}^e \frac{x}{\ln{x}} \, \text dx \,
    \text dy  =
    \int \limits_1^e \, \int \limits_{0}^{\ln{x}} \frac{x}{\ln{x}} \, \text dy \,
       \text dx
-  = \int \limits_0^1 \frac{x}{\ln{x}} \cdot y  \Big|^{\ln{x}}_{0}\, \text dy \,\text dx
-  = \int \limits_0^1 \frac{x}{\cancel{\ln{x}}} \cdot \cancel{\ln{x}} \text dy \,\text dx \]
-\[\hspace{-0.9cm}= \int \limits_0^1 x \, \text dy
+  = \int \limits_1^e \frac{x}{\ln{x}} \cdot y  \Big|^{\ln{x}}_{0}\,\text dx
+  = \int \limits_1^e \frac{x}{\ln{x}} \cdot (\ln x - 0) \, \text dx\]
+\[\hspace{2.1cm} = \int \limits_1^e \frac{x}{\cancel{\ln{x}}} \cdot \cancel{\ln{x}}\,\text dx
+  = \int \limits_1^e x \, \text dx
   = \frac{x^2}{2}\Big|^{e}_{1}
   = \frac{e^2}{2} - \frac{1^2}{2}
   = \frac{e^2-1}{2}\]
