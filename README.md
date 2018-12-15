@@ -16,6 +16,4 @@ En tu repositorio si estas en la rama "ejercicios"
 
 -> 5. git merge master
 
-Esto agregara mi parte a la parte que te tocaba
 
-Disculpa que me haya tardado XD
